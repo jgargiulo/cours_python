@@ -1,3 +1,5 @@
+Short uri: http://bit.ly/2zOIuoA
+
 Python, partie I
 ===============
 
