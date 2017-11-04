@@ -1,0 +1,21 @@
+version: "2"
+services:
+    db:
+        image: mysql
+        ports: 
+            - "8316:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: tralala
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8016:80
+        environment:
+            MYSQL_ROOT_PASSWORD: tralala
+volumes:
+    persistent:
