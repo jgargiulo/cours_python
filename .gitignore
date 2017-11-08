@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.nav
+*.gz
+*.out
+*.snm
+*.pdf
+*.toc
+*.vrb
+*.DS_Store
+**/__pycache__
+*.pyc
+*.swp

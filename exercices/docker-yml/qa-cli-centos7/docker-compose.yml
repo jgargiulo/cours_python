@@ -1,0 +1,11 @@
+version: "2"
+services:
+    centos:
+        build: .
+        volumes:
+            - .:/home/qacli
+            - passwd_file:/etc/
+        privileged: true
+volumes:
+    passwd_file:
+            
