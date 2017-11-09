@@ -29,15 +29,25 @@ def get(dic, karg):
 def add(dic, k, v):
     if is_in(dic, k):
         drop(dic, k)
-        dic.append( (k, v) )
-    else:
-        dic.append( (k,v) )
+
+    dic.append( (k,v) )
 
 def get_or_else(dic, karg, default):
     for k, v in dic:
         if k == karg:
             return v
     return default
+
+def get_or_else_v2(dic, karg, default):
+    try:
+        return get(dic, karg)
+    except KeyException:
+        return default
+
+def get_or_else_v3(dic, karg, default):
+    if not is_in(dic, karg):
+        return default
+    return get(dic, karg)
 
 def length(dic):
     return len(dic)
