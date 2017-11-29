@@ -4,7 +4,6 @@
 *.gz
 *.out
 *.snm
-*.pdf
 *.toc
 *.vrb
 *.DS_Store
